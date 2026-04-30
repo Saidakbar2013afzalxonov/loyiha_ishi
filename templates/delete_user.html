@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="delete-card">
+
+    <h1>Foydalanuvchini o'chirish</h1>
+
+    <p class="warning-text">
+        Siz rostan ham bu foydalanuvchini o'chirmoqchimisiz?
+    </p>
+
+    <div class="student-info">
+        <h2>{{ student.name }} {{ student.surename }}</h2>
+        <p>Email: {{ student.email }}</p>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn delete">Ha, o'chirish</button>
+        <a href="{% url 'student_list' %}" class="btn cancel">Bekor qilish</a>
+    </form>
+
+</div>
+
+{% endblock %}

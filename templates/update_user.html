@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form-card">
+    <h1>Form</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% if form %}
+            {{ form.as_p }}
+        {% else %}
+            <input type="text" name="name" value="{{ student.name }}" placeholder="Name">
+            <input type="text" name="surename" value="{{ student.surename }}" placeholder="Surname">
+            <input type="number" name="age" value="{{ student.age }}">
+            <input type="email" name="email" value="{{ student.email }}">
+            <input type="text" name="phone_number" value="{{ student.phone_number }}">
+            <input type="file" name="picture">
+        {% endif %}
+
+        <button type="submit" class="btn submit">Save</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #5f9cff, #a66cff);
+    min-height: 100vh;
+    color: #333;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.container {
+    padding: 30px;
+}
+
+
+.title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background: #ddd;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+}
+
+.view { background: #3498db; }
+.edit { background: #f39c12; }
+.delete { background: #e74c3c; }
+.submit { background: #2ecc71; }
+
+
+.detail-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.detail-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.delete-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.warning-text {
+    color: red;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.student-info {
+    margin: 20px 0;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.btn.cancel {
+    background: gray;
+}
